@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    color: hsl(0, 0%, 20%);
+    margin: 15px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.choices {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.choices button {
+    font-size: clamp(5rem, 20vw, 7.5rem);
+    min-width: 120px;
+    min-height: 120px;
+    aspect-ratio: 1;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: hsl(200, 100%, 50%);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    touch-action: manipulation;
+}
+
+.choices button:hover,
+.choices button:active {
+    background-color: hsl(200, 100%, 70%);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+#playerDisplay, #computerDisplay {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    margin: 10px 0;
+    padding: 15px 25px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 15px;
+    min-width: 280px;
+    max-width: 90vw;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#resultDisplay {
+    font-size: clamp(2.5rem, 12vw, 5rem);
+    margin: 25px 0;
+    padding: 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    min-width: 300px;
+    max-width: 90vw;
+    text-align: center;
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.scoreDisplay {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    margin: 12px;
+    padding: 15px 25px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.greenText, #playerScoreDisplay {
+    color: hsl(130, 84%, 54%);
+}
+
+.redText, #computerScoreDisplay {
+    color: hsl(0, 84%, 60%);
+}
+
+@media (max-height: 500px) {
+    .choices { margin: 10px 0; }
+    h1 { margin: 10px 0; }
+    #resultDisplay { font-size: clamp(2rem, 8vw, 4rem); }
+}
